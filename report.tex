@@ -1,0 +1,117 @@
+\documentclass[14pt, a4paper]{extarticle}
+
+% --- PREAMBLE ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc} % Standard encoding for English
+\usepackage[english]{babel}
+
+% --- FONT CONFIGURATION (Times New Roman) ---
+\usepackage{mathptmx} 
+
+% --- PAGE LAYOUT & SPACING ---
+\usepackage[top=2.5cm, bottom=3.0cm, left=3.5cm, right=2cm]{geometry}
+\usepackage{setspace}
+\onehalfspacing 
+
+% --- PARAGRAPH FORMATTING ---
+\usepackage{indentfirst} 
+\setlength{\parindent}{1.27cm} 
+\setlength{\parskip}{6pt}      
+
+% --- PACKAGES ---
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{titlesec}
+\usepackage{caption}
+\usepackage{tocloft}
+\usepackage{enumitem}
+\usepackage{longtable}
+\usepackage{array}
+
+% --- FORMATTING TITLES ---
+\titleformat{\section}
+  {\normalfont\fontsize{16}{19}\bfseries\centering}{\thesection.}{1em}{}
+\titleformat{\subsection}
+  {\normalfont\fontsize{14}{16}\bfseries}{\thesubsection.}{1em}{}
+\titleformat{\subsubsection}
+  {\normalfont\fontsize{14}{16}\itshape}{\thesubsubsection.}{1em}{}
+
+% --- CAPTION SETUP ---
+\captionsetup[table]{position=top, skip=6pt, name=Table, font={bf, small}}
+\captionsetup[figure]{position=bottom, skip=6pt, name=Figure, font={bf, small}}
+
+% --- LISTINGS SETUP ---
+\definecolor{codegray}{rgb}{0.95,0.95,0.95}
+\definecolor{codeblue}{rgb}{0,0,0.8}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+
+\lstset{
+    backgroundcolor=\color{codegray},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{codeblue},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\small,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    frame=single
+}
+
+% --- HYPERREF SETUP ---
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=black,
+    urlcolor=blue,
+    citecolor=black,
+    pdftitle={Internship Report - Baby Cry Monitor v2.2},
+}
+
+\begin{document}
+
+\input{chapters/0_frontmatter}
+
+% =================================================================================
+%                                   TABLE OF CONTENTS
+% =================================================================================
+\newpage
+\tableofcontents
+
+% =================================================================================
+%                               LIST OF TABLES
+% =================================================================================
+\newpage
+\phantomsection
+\addcontentsline{toc}{section}{List of Tables}
+\listoftables
+
+% =================================================================================
+%                               LIST OF FIGURES
+% =================================================================================
+\newpage
+\phantomsection
+\addcontentsline{toc}{section}{List of Figures}
+\listoffigures
+
+\input{chapters/1_overview}
+\input{chapters/2_theory}
+\input{chapters/3_implementation}
+\input{chapters/4_results}
+\input{chapters/5_conclusion}
+
+\end{document}

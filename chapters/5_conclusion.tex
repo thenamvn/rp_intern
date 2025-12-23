@@ -1,0 +1,143 @@
+\newpage
+\section{CONCLUSION AND RECOMMENDATIONS}
+
+\subsection{Conclusion}
+The internship at NTQ Solutions has been a transformative experience, bridging the gap between academic theory and industrial application. The "Baby Cry Monitor v2.2" project evolved from a standalone prototype into a comprehensive IoT ecosystem, integrating Edge AI, Cloud Computing, and Mobile technology.
+
+Key achievements include:
+\begin{itemize}
+    \item \textbf{Full-Stack IoT Implementation:} Successfully architected and deployed a complete pipeline connecting Raspberry Pi sensors, a FastAPI cloud backend, and a React Native mobile interface.
+    \item \textbf{Performance Optimization:} Mastered system profiling techniques to implement the "Zero Disk I/O" strategy, reducing latency by over 90\%.
+    \item \textbf{Advanced Data Management:} Leveraged TimescaleDB to handle high-frequency sensor data efficiently, enabling real-time analytics.
+    \item \textbf{Cross-Platform Development:} Delivered a polished mobile user experience with robust real-time alert capabilities.
+\end{itemize}
+
+However, certain limitations remain:
+\begin{itemize}
+    \item \textbf{Hardware Cost:} The reliance on Raspberry Pi 4 increases the Bill of Materials (BoM).
+    \item \textbf{Connectivity Dependence:} The system currently requires an active internet connection for the mobile app to receive alerts; a local LAN fallback mode is not yet implemented.
+\end{itemize}
+
+\subsection{Recommendations}
+\subsubsection{For NTQ Solutions}
+\begin{itemize}
+    \item \textbf{Edge AI Migration:} Investigate porting the YOLO model to lower-cost microcontrollers like the ESP32-S3 or K210 to reduce production costs.
+    \item \textbf{Federated Learning:} Explore federated learning techniques to update AI models locally on user devices, enhancing privacy by reducing the need to upload audio data to the cloud.
+\end{itemize}
+
+\subsubsection{For Vietnam Japan University}
+\begin{itemize}
+    \item \textbf{Curriculum Enhancement:} Incorporate modules on Cloud-Native IoT architectures and Cross-Platform Mobile Development to better prepare students for modern tech stacks.
+    \item \textbf{Industry Collaboration:} Continue fostering relationships with industry leaders to provide students with exposure to real-world R\&D challenges.
+\end{itemize}
+
+\newpage
+\section{SELF-REFLECTION}
+
+\subsection{Lessons Learned}
+This internship provided invaluable insights into the professional software development lifecycle:
+\begin{enumerate}
+    \item \textbf{System Thinking:} I learned to view problems holistically, understanding how a bottleneck in the Edge device affects the User Experience in the mobile app.
+    \item \textbf{Technical Versatility:} Working across Python (Backend/AI), C++ (Optimization), and TypeScript (Mobile) enhanced my adaptability and ability to learn new technologies rapidly.
+    \item \textbf{Professional Standards:} Participating in Agile sprints and code reviews instilled the importance of writing clean, maintainable, and well-documented code.
+\end{enumerate}
+
+\subsection{Future Aspirations}
+Building on this foundation, my future goals are:
+\begin{itemize}
+    \item To pursue a career as a Full-Stack IoT Engineer, specializing in the intersection of Embedded Systems and Cloud AI.
+    \item To conduct further research into Edge Computing architectures that prioritize user privacy in smart home applications.
+    \item To apply the practical knowledge gained from this internship to my graduation thesis, ensuring it addresses real-world problems with viable solutions.
+\end{itemize}
+
+\newpage
+\section*{REFERENCES}
+\addcontentsline{toc}{section}{References}
+
+\begin{enumerate}[label={[\arabic*]}]
+    \item Redmon, J., Divvala, S., Girshick, R., \& Farhadi, A. (2016). \textit{You Only Look Once: Unified, Real-Time Object Detection}. Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR).
+    \item Banks, A., \& Gupta, R. (2014). \textit{MQTT Version 3.1.1}. OASIS Standard.
+    \item Foundation, R. P. (2023). \textit{Raspberry Pi 4 Model B Datasheet}. Raspberry Pi Ltd.
+    \item Tiangolo, S. (2019). \textit{FastAPI: High performance, easy to learn, fast to code, ready for production}. https://fastapi.tiangolo.com/
+    \item Expo. (2024). \textit{Expo Documentation: Create Universal Native Apps}. https://docs.expo.dev/
+    \item Timescale. (2024). \textit{TimescaleDB: PostgreSQL for Time-Series}. https://www.timescale.com/
+    \item Mushtaq, Z., \& Su, S. F. (2020). \textit{Environmental sound classification using a regularized deep convolutional neural network with data augmentation}. Applied Acoustics, 167, 107389.
+\end{enumerate}
+
+% =================================================================================
+%                                   APPENDICES
+% =================================================================================
+\newpage
+\section*{APPENDICES}
+\addcontentsline{toc}{section}{Appendices}
+
+\subsection*{Appendix A: Source Code Snippets}
+
+\textbf{1. Audio Producer Thread (Zero Blind Spots)}
+\begin{lstlisting}[language=Python]
+import threading
+import queue
+import pyaudio
+
+class AudioProducer(threading.Thread):
+    def __init__(self, audio_queue, chunk_size=1024):
+        super().__init__()
+        self.queue = audio_queue
+        self.chunk_size = chunk_size
+        self.running = True
+        self.pa = pyaudio.PyAudio()
+
+    def run(self):
+        stream = self.pa.open(format=pyaudio.paFloat32,
+                              channels=1,
+                              rate=16000,
+                              input=True,
+                              frames_per_buffer=self.chunk_size)
+        while self.running:
+            try:
+                data = stream.read(self.chunk_size, exception_on_overflow=False)
+                if not self.queue.full():
+                    self.queue.put(data)
+            except Exception as e:
+                print(f"Error recording: {e}")
+        stream.stop_stream()
+        stream.close()
+\end{lstlisting}
+
+\textbf{2. FastAPI WebSocket Manager}
+\begin{lstlisting}[language=Python]
+class ConnectionManager:
+    def __init__(self):
+        self.active_connections: List[WebSocket] = []
+
+    async def connect(self, websocket: WebSocket):
+        await websocket.accept()
+        self.active_connections.append(websocket)
+
+    async def broadcast(self, message: str):
+        for connection in self.active_connections:
+            await connection.send_text(message)
+\end{lstlisting}
+
+\subsection*{Appendix B: Project Timeline}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|l|l|}
+    \hline
+    \textbf{Week} & \textbf{Activity} & \textbf{Outcome} \\
+    \hline
+    1-2 & Orientation & Hardware selection, Environment setup \\
+    \hline
+    3-4 & Architecture Design & Multi-threading design, Database Schema \\
+    \hline
+    5-6 & AI Model & Data augmentation, YOLO training \\
+    \hline
+    7-8 & Implementation & Backend API, Mobile App UI, MQTT Integration \\
+    \hline
+    9 & Testing & Stress test, Latency measurement \\
+    \hline
+    10 & Documentation & Final Report writing \\
+    \hline
+    \end{tabular}
+    \caption{Internship Project Timeline}
+\end{table}

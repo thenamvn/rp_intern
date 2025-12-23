@@ -1,0 +1,76 @@
+\newpage
+\section{INTERNSHIP CONTENT AND IMPLEMENTATION}
+
+\subsection{Tasks Assigned}
+During the internship, I was responsible for the full-stack development of the "Baby Cry Monitor v2.2" prototype. My responsibilities encompassed the entire IoT pipeline, from edge computing to cloud infrastructure and user interface:
+\begin{enumerate}
+    \item \textbf{Edge Computing:} Researching hardware (Raspberry Pi) and optimizing the audio processing pipeline for real-time performance.
+    \item \textbf{Backend Development:} Designing a microservice-based backend using FastAPI to handle data ingestion, authentication, and persistent storage.
+    \item \textbf{Database Design:} Implementing TimescaleDB for efficient storage and retrieval of time-series sensor data.
+    \item \textbf{Mobile Application:} Developing a cross-platform mobile app (React Native) for real-time monitoring and alerts.
+    \item \textbf{System Integration:} Establishing secure communication protocols (MQTT, WebSockets) between the device, server, and application.
+\end{enumerate}
+
+\subsection{System Architecture}
+The system follows a three-tier IoT architecture:
+\begin{itemize}
+    \item \textbf{Edge Layer:} The Raspberry Pi 4 captures audio and environmental data. It performs initial signal processing and communicates with the cloud via MQTT.
+    \item \textbf{Cloud Layer:} A FastAPI server acts as the central coordinator. It ingests data from MQTT, stores it in TimescaleDB, and manages WebSocket connections for real-time client updates.
+    \item \textbf{Application Layer:} A React Native mobile application serves as the user interface, providing dashboards, historical charts, and critical alerts.
+\end{itemize}
+
+\subsection{Edge Device Implementation}
+The hardware foundation is the Raspberry Pi 4 Model B, chosen for its processing capability. The software is written in Python 3.9 using a multi-threaded architecture to ensure non-blocking audio acquisition.
+
+\subsubsection{Zero Disk I/O Optimization}
+A critical challenge in the previous version (v1.0) was the latency introduced by writing intermediate audio and image files to the SD card. To resolve this, I implemented a \textbf{Zero Disk I/O} strategy:
+\begin{itemize}
+    \item \textbf{In-Memory Processing:} Audio chunks are stored in RAM using \texttt{collections.deque}.
+    \item \textbf{Virtual Buffers:} Spectrogram images are generated into \texttt{io.BytesIO()} objects instead of physical files.
+    \item \textbf{Direct Inference:} The AI model reads byte streams directly from memory.
+\end{itemize}
+This optimization reduced end-to-end latency from approximately 5 seconds to under 200 milliseconds.
+
+\subsection{Backend System Implementation}
+The backend is designed as a high-performance asynchronous server using \textbf{FastAPI}.
+
+\subsubsection{Data Ingestion and MQTT Service}
+The backend runs a dedicated MQTT Service that subscribes to sensor topics. Upon receiving a payload (Temperature, Humidity, Cry Confidence), the service:
+\begin{enumerate}
+    \item Validates the data schema.
+    \item Asynchronously writes the record to the \textbf{TimescaleDB} hypertable for long-term storage.
+    \item Evaluates the "Severity" of the event (e.g., High Fever + Crying = CRITICAL).
+    \item Broadcasts the event to connected mobile clients via the WebSocket Manager.
+\end{enumerate}
+
+\subsubsection{AI Engine Integration}
+While the Edge device performs initial detection, the backend hosts a secondary, more powerful AI Engine (YOLOv8) for verifying uploaded audio samples. This allows for continuous model improvement; false positives flagged by users can be re-analyzed and added to the training dataset.
+
+\subsubsection{Time-Series Analytics}
+Using TimescaleDB's \texttt{time\_bucket} functions, the system efficiently aggregates millions of data points to provide the mobile app with:
+\begin{itemize}
+    \item Hourly temperature trends.
+    \item Daily cry frequency histograms.
+    \item Heatmaps showing peak activity times during the week.
+\end{itemize}
+
+\subsection{Mobile Application Development}
+The mobile application is built with \textbf{Expo (React Native)} and TypeScript, ensuring a consistent experience on both iOS and Android.
+
+\subsubsection{Real-Time Dashboard}
+The dashboard connects to the backend via \textbf{WebSockets}. It features:
+\begin{itemize}
+    \item \textbf{Live Status Indicators:} Visual emojis change dynamically based on the baby's state (e.g., "Crying", "Sleeping").
+    \item \textbf{Interactive Charts:} Utilizing \texttt{react-native-chart-kit} to visualize health trends.
+\end{itemize}
+
+\subsubsection{Intelligent Alert System}
+To ensure parents never miss a critical event, the app implements a multi-modal feedback system:
+\begin{itemize}
+    \item \textbf{Audio:} Plays a distinct alarm sound using \texttt{expo-av}.
+    \item \textbf{Haptic:} Triggers vibration patterns via \texttt{expo-haptics} to alert parents even if the phone is in silent mode.
+    \item \textbf{Visual:} Displays color-coded banners (Red for Critical, Orange for Warning).
+\end{itemize}
+
+\subsubsection{Security}
+User authentication is managed via JWT (JSON Web Tokens). Tokens are securely stored using \texttt{expo-secure-store} (iOS) and \texttt{AsyncStorage} (Android), enabling secure auto-login functionality.

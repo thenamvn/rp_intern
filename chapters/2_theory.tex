@@ -1,0 +1,60 @@
+\newpage
+\section{THEORETICAL BACKGROUND}
+
+The successful implementation of the "Baby Cry Monitor v2.2" requires a multidisciplinary approach, integrating digital signal processing, deep learning, and modern software architecture. This chapter outlines the theoretical foundations governing the system's design, from acoustic analysis to cloud-based infrastructure.
+
+\subsection{Digital Audio Signal Processing}
+\subsubsection{Characteristics of Audio Signals}
+Sound propagates as a mechanical wave. In digital systems, continuous analog signals are converted into discrete data through Sampling and Quantization.
+\begin{itemize}
+    \item \textbf{Sampling Rate ($f_s$):} The Nyquist-Shannon sampling theorem dictates that to reconstruct a signal accurately, the sampling rate must be at least twice the maximum frequency component ($f_{max}$) of the signal ($f_s \geq 2 \cdot f_{max}$). This project utilizes a sampling rate of 16kHz, sufficient to capture the frequency range of infant vocalizations (typically 400Hz to 4000Hz).
+    \item \textbf{Quantization:} This process maps infinite amplitude values to a finite set of discrete levels. A 16-bit depth is employed to ensure a high dynamic range.
+\end{itemize}
+
+\subsubsection{Short-Time Fourier Transform (STFT)}
+To analyze non-stationary signals like human speech, the signal must be transformed from the Time Domain to the Time-Frequency Domain. The Short-Time Fourier Transform (STFT) achieves this by segmenting the signal into overlapping windows and applying the Discrete Fourier Transform (DFT) to each segment:
+\begin{equation}
+    X(m, \omega) = \sum_{n=-\infty}^{\infty} x[n] w[n-m] e^{-j\omega n}
+\end{equation}
+where $x[n]$ is the input signal and $w[n]$ is the window function. This transformation preserves temporal localization, allowing the system to detect the specific onset of a cry.
+
+\subsubsection{Mel-Spectrogram Generation}
+The power spectrum obtained from STFT is mapped to the Mel Scale, a perceptual scale of pitches judged by listeners to be equal in distance from one another. The mapping is defined as:
+\begin{equation}
+    M(f) = 2595 \log_{10}\left(1 + \frac{f}{700}\right)
+\end{equation}
+The resulting Mel-Spectrogram provides a visual representation of the audio that emphasizes lower frequencies (400--600 Hz), where the fundamental frequency ($F_0$) of an infant cry resides. This 2D representation serves as the input for the computer vision model.
+
+\subsection{Deep Learning for Object Detection}
+\subsubsection{Convolutional Neural Networks (CNN)}
+CNNs are deep learning architectures optimized for processing grid-like data. They employ convolutional layers to extract hierarchical features, pooling layers to reduce dimensionality, and fully connected layers for classification. In this project, CNNs are used to analyze the visual patterns within Mel-Spectrograms.
+
+\subsubsection{YOLO (You Only Look Once)}
+YOLO is a real-time object detection framework that treats detection as a single regression problem. Unlike region-based methods, YOLO processes the entire image in a single forward pass, predicting bounding boxes and class probabilities simultaneously.
+\begin{equation}
+    \mathcal{L} = \lambda_{coord} \sum_{i=0}^{S^2} \sum_{j=0}^{B} \mathbb{1}_{ij}^{obj} \left[ (x_i - \hat{x}_i)^2 + (y_i - \hat{y}_i)^2 \right] + \dots
+\end{equation}
+By applying YOLO to spectrograms, the system can detect "cry objects"—distinct harmonic structures—regardless of their temporal position, offering robustness against background noise.
+
+\subsection{IoT Communication Protocols}
+\subsubsection{MQTT (Message Queuing Telemetry Transport)}
+MQTT is a lightweight, publish-subscribe protocol designed for low-bandwidth, high-latency networks. It decouples the data producer (Edge Device) from the consumer (Mobile App) via a central Broker.
+\begin{itemize}
+    \item \textbf{QoS 1 (At Least Once):} The system utilizes Quality of Service level 1 to ensure that critical alerts (e.g., crying detected) are delivered even in unstable network conditions.
+    \item \textbf{Topic Hierarchy:} Data is organized into topics (e.g., \texttt{vju/baby\_monitor/alert}), allowing for precise message routing.
+\end{itemize}
+
+\subsection{Mobile Application Frameworks}
+\subsubsection{React Native and Expo}
+React Native is a cross-platform framework that allows for the development of native mobile applications using JavaScript and React. It employs a "bridge" architecture to invoke native rendering APIs, ensuring high performance.
+\begin{itemize}
+    \item \textbf{Expo SDK:} A set of tools and services built around React Native that simplifies the development process. It provides access to native device capabilities (Camera, Microphone, Haptics) through a unified JavaScript API, which is crucial for features like vibration alerts and audio playback.
+\end{itemize}
+
+\subsection{Backend Architecture and Databases}
+\subsubsection{FastAPI}
+FastAPI is a modern, high-performance web framework for building APIs with Python 3.7+. It is built on top of Starlette for the web parts and Pydantic for the data parts. Its asynchronous capabilities are essential for handling concurrent WebSocket connections and real-time data streams from multiple IoT devices.
+
+\subsubsection{Time-Series Databases (TimescaleDB)}
+IoT systems generate massive amounts of temporal data. Traditional relational databases often struggle with the ingestion rate and query performance required for time-series data.
+\textbf{TimescaleDB} is an open-source database invented for time-series data, implemented as an extension of PostgreSQL. It utilizes "hypertables"—an abstraction layer that automatically partitions data across time and space—to maintain high insert rates and fast queries for analytics (e.g., calculating average temperature over the last 24 hours).

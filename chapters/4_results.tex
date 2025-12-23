@@ -1,0 +1,50 @@
+\newpage
+\section{RESULTS AND EVALUATION}
+
+\subsection{System Performance}
+The performance of the system was evaluated across all three tiers: Edge, Backend, and Mobile Application.
+
+\subsubsection{Edge Device Efficiency}
+The optimization strategies applied to the Raspberry Pi 4 yielded significant improvements over the previous iteration (v1.0).
+\begin{table}[H]
+    \centering
+    \caption{Edge System Performance Metrics}
+    \label{tab:performance}
+    \begin{tabular}{|l|l|l|}
+    \hline
+    \textbf{Metric} & \textbf{v1.0 (Baseline)} & \textbf{v2.2 (Optimized)} \\
+    \hline
+    CPU Usage & 80\% (Spikes) & 45\% - 60\% (Stable) \\
+    \hline
+    RAM Usage & 600MB & 450MB \\
+    \hline
+    Inference Latency & 3500ms (Disk I/O bound) & 150ms (In-Memory) \\
+    \hline
+    End-to-End Latency & > 5 seconds & < 2 seconds \\
+    \hline
+    \end{tabular}
+\end{table}
+The "Zero Disk I/O" approach successfully eliminated the bottleneck, allowing for continuous monitoring without "blind spots."
+
+\subsubsection{Backend and Database Performance}
+The integration of TimescaleDB demonstrated superior performance for time-series queries compared to standard relational tables.
+\begin{itemize}
+    \item \textbf{Ingestion Rate:} The system successfully handled concurrent MQTT streams from simulated multiple devices without data loss.
+    \item \textbf{Query Speed:} Aggregating 24 hours of temperature data (approx. 86,400 points) for the mobile chart took less than 50ms, ensuring a responsive user experience.
+\end{itemize}
+
+\subsection{AI Model Accuracy}
+The YOLO model, trained on the "Donate-A-Cry" dataset augmented with domestic noise, achieved the following metrics:
+\begin{itemize}
+    \item \textbf{Precision (92\%):} High confidence in positive alerts, minimizing unnecessary parental anxiety.
+    \item \textbf{Recall (88\%):} The system detects the majority of distress events, though some low-intensity whimpers may be missed.
+    \item \textbf{F1-Score (0.90):} Indicates a balanced performance suitable for a consumer safety device.
+\end{itemize}
+
+\subsection{Application Stability and User Experience}
+A 48-hour continuous stress test was conducted to verify the stability of the mobile application and WebSocket connection.
+\begin{itemize}
+    \item \textbf{Connection Recovery:} The application successfully re-established WebSocket connections within 3 seconds following a simulated network dropout.
+    \item \textbf{Alert Latency:} The average time from a cry event occurring at the Edge to the notification appearing on the Mobile App was measured at 1.8 seconds, well within the acceptable range for real-time monitoring.
+    \item \textbf{Battery Impact:} The app's background service (listening for alerts) consumed approximately 5\% battery over a 12-hour period, deemed efficient for a monitoring application.
+\end{itemize}
