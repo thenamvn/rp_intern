@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.29)  24 DEC 2025 13:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.29)  24 DEC 2025 13:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -741,14 +741,14 @@ Overfull \hbox (12.00006pt too wide) in paragraph at lines 47--48
 [16]
 
 [17]
-Overfull \hbox (3.9941pt too wide) in paragraph at lines 41--42
+Overfull \hbox (3.9941pt too wide) in paragraph at lines 45--46
 []\T1/ptm/b/n/14.4 Technical Ver-sa-til-ity: \T1/ptm/m/n/14.4 Work-ing across Python (Back-end/AI), C++ (Op-
  []
 
 
 
 [18]
-Overfull \hbox (118.60059pt too wide) in paragraph at lines 63--64
+Overfull \hbox (118.60059pt too wide) in paragraph at lines 69--70
 []\T1/ptm/m/n/14.4 Timescale. (2024). \T1/ptm/m/it/14.4 TimescaleDB: Post-greSQL for Time-Series\T1/ptm/m/n/14.4 . https://www.timescale.com/ 
  []
 
@@ -759,7 +759,7 @@ File: lstlang1.sty 2024/09/23 1.10c listings language file
 )
 
 [20]
-Overfull \hbox (34.79918pt too wide) in paragraph at lines 125--142
+Overfull \hbox (34.79918pt too wide) in paragraph at lines 138--155
  [][] 
  []
 
@@ -776,13 +776,13 @@ Package rerunfilecheck Info: File `report.out' has not changed.
 Here is how much of TeX's memory you used:
  16875 strings out of 468080
  269024 string characters out of 5421899
- 1177813 words of memory out of 5000000
+ 1157813 words of memory out of 5000000
  45113 multiletter control sequences out of 15000+600000
  686322 words of font info for 116 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,9n,79p,521b,2044s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,9n,79p,521b,1322s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Administrator\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\Administrator\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1440.pk><C:/Users/Administrator/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Administrator/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Administrator/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Administrator/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Administrator/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Administrator/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb><C:/Users/Administrator/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/Administrator/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/Administrator/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Administrator/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Administrator/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on report.pdf (28 pages, 1348325 bytes).
+Output written on report.pdf (28 pages, 1348373 bytes).
 PDF statistics:
  647 PDF objects out of 1000 (max. 8388607)
  147 named destinations out of 1000 (max. 500000)

@@ -18,6 +18,8 @@ However, certain limitations remain:
     \item \textbf{Connectivity Dependence:} The system currently requires an active internet connection for the mobile app to receive alerts; a local LAN fallback mode is not yet implemented.
 \end{itemize}
 
+\FloatBarrier
+
 \subsection{Recommendations}
 \subsubsection{For NTQ Solutions}
 \begin{itemize}
@@ -30,6 +32,8 @@ However, certain limitations remain:
     \item \textbf{Curriculum Enhancement:} Incorporate modules on Cloud-Native IoT architectures and Cross-Platform Mobile Development to better prepare students for modern tech stacks.
     \item \textbf{Industry Collaboration:} Continue fostering relationships with industry leaders to provide students with exposure to real-world R\&D challenges.
 \end{itemize}
+
+\FloatBarrier
 
 \newpage
 \section{SELF-REFLECTION}
@@ -50,6 +54,8 @@ Building on this foundation, my future goals are:
     \item To apply the practical knowledge gained from this internship to my graduation thesis, ensuring it addresses real-world problems with viable solutions.
 \end{itemize}
 
+\FloatBarrier
+
 \newpage
 \section*{REFERENCES}
 \addcontentsline{toc}{section}{References}
@@ -63,6 +69,8 @@ Building on this foundation, my future goals are:
     \item Timescale. (2024). \textit{TimescaleDB: PostgreSQL for Time-Series}. https://www.timescale.com/
     \item Mushtaq, Z., \& Su, S. F. (2020). \textit{Environmental sound classification using a regularized deep convolutional neural network with data augmentation}. Applied Acoustics, 167, 107389.
 \end{enumerate}
+
+\FloatBarrier
 
 % =================================================================================
 %                                   APPENDICES
@@ -104,6 +112,9 @@ class AudioProducer(threading.Thread):
         stream.close()
 \end{lstlisting}
 
+\FloatBarrier
+
+\newpage
 \textbf{2. FastAPI WebSocket Manager}
 \begin{lstlisting}[language=Python]
 class ConnectionManager:
@@ -118,6 +129,8 @@ class ConnectionManager:
         for connection in self.active_connections:
             await connection.send_text(message)
 \end{lstlisting}
+
+\FloatBarrier
 
 \subsection*{Appendix B: Project Timeline}
 \begin{table}[H]
@@ -141,3 +154,5 @@ class ConnectionManager:
     \end{tabular}
     \caption{Internship Project Timeline}
 \end{table}
+
+\FloatBarrier
