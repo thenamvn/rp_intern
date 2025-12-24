@@ -19,6 +19,7 @@
 \setlength{\parskip}{6pt}      
 
 % --- PACKAGES ---
+\usepackage{microtype} % Cải thiện căn chỉnh, giảm thiểu việc cắt từ
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{xcolor}
@@ -33,6 +34,13 @@
 \usepackage{enumitem}
 \usepackage{longtable}
 \usepackage{array}
+
+% --- HYPHENATION SETTINGS ---
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
 \usepackage[section]{placeins}  % Tự động barrier mỗi section
 \usepackage{float}
 
