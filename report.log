@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.29)  24 DEC 2025 13:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.28)  24 DEC 2025 23:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/Administrator/Desktop/rp_intern/report.tex
-(c:/Users/Administrator/Desktop/rp_intern/report.tex
+**c:/Users/Administrator/Downloads/bc-tt/report.tex
+(c:/Users/Administrator/Downloads/bc-tt/report.tex
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-10-09>
 (C:\Users\Administrator\AppData\Local\Programs\MiKTeX\tex/latex/extsizes\extarticle.cls
@@ -649,7 +649,7 @@ Overfull \hbox (3.34673pt too wide) in paragraph at lines 4--5
 \T1/ptm/m/n/14.4 quires a mul-ti-dis-ci-plinary ap-proach, in-te-grat-ing dig-i-tal sig-nal pro-cess-ing, deep
  []
 
-<figures/stft_process.png, id=314, 6579.58125pt x 1259.70625pt>
+<figures/stft_process.png, id=317, 6579.58125pt x 1259.70625pt>
 File: figures/stft_process.png Graphic file (type png)
 <use figures/stft_process.png>
 Package pdftex.def Info: figures/stft_process.png  used on input line 19.
@@ -679,7 +679,7 @@ Overfull \hbox (29.62553pt too wide) in paragraph at lines 11--12
 []\T1/ptm/b/n/14.4 System In-te-gra-tion: \T1/ptm/m/n/14.4 Es-tab-lish-ing se-cure com-mu-ni-ca-tion pro-to-cols (MQTT,
  []
 
-<figures/system_architecture.png, id=351, 2922.92pt x 5083.99374pt>
+<figures/system_architecture.png, id=354, 2922.92pt x 5083.99374pt>
 File: figures/system_architecture.png Graphic file (type png)
 <use figures/system_architecture.png>
 Package pdftex.def Info: figures/system_architecture.png  used on input line 19.
@@ -694,7 +694,7 @@ Overfull \hbox (5.7789pt too wide) in paragraph at lines 27--28
 
 
 [9 <./figures/system_architecture.png>]
-<figures/edge_pipeline.png, id=366, 2653.915pt x 5697.285pt>
+<figures/edge_pipeline.png, id=369, 2653.915pt x 5697.285pt>
 File: figures/edge_pipeline.png Graphic file (type png)
 <use figures/edge_pipeline.png>
 Package pdftex.def Info: figures/edge_pipeline.png  used on input line 35.
@@ -711,7 +711,7 @@ Overfull \hbox (7.36841pt too wide) in paragraph at lines 44--45
 []\T1/ptm/b/n/14.4 Virtual Buffers: \T1/ptm/m/n/14.4 Spec-tro-gram im-ages are gen-er-ated into \T1/cmtt/m/n/14.4 io.BytesIO()
  []
 
-<figures/backend_flow.png, id=372, 7284.21375pt x 4020.01875pt>
+<figures/backend_flow.png, id=375, 7284.21375pt x 4020.01875pt>
 File: figures/backend_flow.png Graphic file (type png)
 <use figures/backend_flow.png>
 Package pdftex.def Info: figures/backend_flow.png  used on input line 54.
@@ -719,53 +719,66 @@ Package pdftex.def Info: figures/backend_flow.png  used on input line 54.
 
 
 [11 <./figures/backend_flow.png>]
+<figures/app_dashboard.jpg, id=381, 1084.05pt x 2409.0pt>
+File: figures/app_dashboard.jpg Graphic file (type jpg)
+<use figures/app_dashboard.jpg>
+Package pdftex.def Info: figures/app_dashboard.jpg  used on input line 85.
+(pdftex.def)             Requested size: 198.45662pt x 440.98972pt.
+<figures/app_statistics.jpg, id=382, 1084.05pt x 2409.0pt>
+File: figures/app_statistics.jpg Graphic file (type jpg)
+<use figures/app_statistics.jpg>
+Package pdftex.def Info: figures/app_statistics.jpg  used on input line 87.
+(pdftex.def)             Requested size: 198.45662pt x 440.98972pt.
 
-[12]) (chapters/4_results.tex
-Overfull \hbox (4.74902pt too wide) in paragraph at lines 98--1
+
+[12]
+
+[13 <./figures/app_dashboard.jpg> <./figures/app_statistics.jpg>]) (chapters/4_results.tex
+Overfull \hbox (4.74902pt too wide) in paragraph at lines 108--1
 \T1/ptm/m/n/14.4 are se-curely stored us-ing \T1/cmtt/m/n/14.4 expo-secure-store \T1/ptm/m/n/14.4 (iOS) and \T1/cmtt/m/n/14.4 AsyncStorage \T1/ptm/m/n/14.4 (An-
  []
 
 
 
-[13]
-
 [14]
+
+[15]
 Overfull \hbox (12.00006pt too wide) in paragraph at lines 47--48
 []\T1/ptm/b/n/14.4 Connection Re-cov-ery: \T1/ptm/m/n/14.4 The ap-pli-ca-tion suc-cess-fully re-established Web-
  []
 
 ) (chapters/5_conclusion.tex
 
-[15]
-
 [16]
 
 [17]
+
+[18]
 Overfull \hbox (3.9941pt too wide) in paragraph at lines 45--46
 []\T1/ptm/b/n/14.4 Technical Ver-sa-til-ity: \T1/ptm/m/n/14.4 Work-ing across Python (Back-end/AI), C++ (Op-
  []
 
 
 
-[18]
+[19]
 Overfull \hbox (118.60059pt too wide) in paragraph at lines 69--70
 []\T1/ptm/m/n/14.4 Timescale. (2024). \T1/ptm/m/it/14.4 TimescaleDB: Post-greSQL for Time-Series\T1/ptm/m/n/14.4 . https://www.timescale.com/ 
  []
 
 
 
-[19] (C:\Users\Administrator\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+[20] (C:\Users\Administrator\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
 )
 
-[20]
+[21]
 Overfull \hbox (34.79918pt too wide) in paragraph at lines 138--155
  [][] 
  []
 
 )
 
-[21] (report.aux)
+[22] (report.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-10-09>
@@ -774,17 +787,17 @@ Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: 107BCA39BAEDB41DE066279453BB4D3B;9735.
  ) 
 Here is how much of TeX's memory you used:
- 16875 strings out of 468080
- 269024 string characters out of 5421899
- 1157813 words of memory out of 5000000
- 45113 multiletter control sequences out of 15000+600000
+ 16892 strings out of 468080
+ 269478 string characters out of 5421899
+ 1158089 words of memory out of 5000000
+ 45128 multiletter control sequences out of 15000+600000
  686322 words of font info for 116 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,9n,79p,521b,1322s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,9n,79p,519b,1322s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Administrator\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\Administrator\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1440.pk><C:/Users/Administrator/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Administrator/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Administrator/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Administrator/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Administrator/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Administrator/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb><C:/Users/Administrator/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/Administrator/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/Administrator/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Administrator/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Administrator/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on report.pdf (28 pages, 1348373 bytes).
+Output written on report.pdf (29 pages, 1675358 bytes).
 PDF statistics:
- 647 PDF objects out of 1000 (max. 8388607)
- 147 named destinations out of 1000 (max. 500000)
- 437 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 656 PDF objects out of 1000 (max. 8388607)
+ 149 named destinations out of 1000 (max. 500000)
+ 447 words of extra memory for PDF output out of 10000 (max. 10000000)
 
