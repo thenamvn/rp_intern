@@ -13,6 +13,14 @@ During the internship, I was responsible for the full-stack development of the "
 
 \subsection{System Architecture}
 The system follows a three-tier IoT architecture:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.65\textwidth]{figures/system_architecture.png}
+    \caption{Three-Tier IoT Architecture of Baby Cry Monitor v2.2}
+    \label{fig:system_arch}
+\end{figure}
+
 \begin{itemize}
     \item \textbf{Edge Layer:} The Raspberry Pi 4 captures audio and environmental data. It performs initial signal processing and communicates with the cloud via MQTT.
     \item \textbf{Cloud Layer:} A FastAPI server acts as the central coordinator. It ingests data from MQTT, stores it in TimescaleDB, and manages WebSocket connections for real-time client updates.
@@ -21,6 +29,13 @@ The system follows a three-tier IoT architecture:
 
 \subsection{Edge Device Implementation}
 The hardware foundation is the Raspberry Pi 4 Model B, chosen for its processing capability. The software is written in Python 3.9 using a multi-threaded architecture to ensure non-blocking audio acquisition.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figures/edge_pipeline.png}
+    \caption{Edge Device Processing Pipeline}
+    \label{fig:edge_pipeline}
+\end{figure}
 
 \subsubsection{Zero Disk I/O Optimization}
 A critical challenge in the previous version (v1.0) was the latency introduced by writing intermediate audio and image files to the SD card. To resolve this, I implemented a \textbf{Zero Disk I/O} strategy:
@@ -33,6 +48,13 @@ This optimization reduced end-to-end latency from approximately 5 seconds to und
 
 \subsection{Backend System Implementation}
 The backend is designed as a high-performance asynchronous server using \textbf{FastAPI}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/backend_flow.png}
+    \caption{Backend Data Processing Flow}
+    \label{fig:backend_flow}
+\end{figure}
 
 \subsubsection{Data Ingestion and MQTT Service}
 The backend runs a dedicated MQTT Service that subscribes to sensor topics. Upon receiving a payload (Temperature, Humidity, Cry Confidence), the service:

@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.28)  23 DEC 2025 21:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.29)  24 DEC 2025 13:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/Administrator/Downloads/bc-tt/report.tex
-(c:/Users/Administrator/Downloads/bc-tt/report.tex
+**c:/Users/Administrator/Desktop/rp_intern/report.tex
+(c:/Users/Administrator/Desktop/rp_intern/report.tex
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-10-09>
 (C:\Users\Administrator\AppData\Local\Programs\MiKTeX\tex/latex/extsizes\extarticle.cls
@@ -468,9 +468,11 @@ Package: array 2025/06/08 v2.6j Tabular extension package (FMi)
 \extratabsurround=\skip93
 \backup@length=\skip94
 \ar@cellbox=\box67
+) (C:\Users\Administrator\AppData\Local\Programs\MiKTeX\tex/latex/placeins\placeins.sty
+Package: placeins 2005/04/18  v 2.2
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 83.
-LaTeX Font Info:    Trying to load font information for T1+ptm on input line 85.
+Package hyperref Info: Option `colorlinks' set `true' on input line 85.
+LaTeX Font Info:    Trying to load font information for T1+ptm on input line 87.
  (C:\Users\Administrator\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 ) (C:\Users\Administrator\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
@@ -479,24 +481,24 @@ File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 ) (report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -547,11 +549,17 @@ LaTeX Font Info:    ... okay on input line 85.
 \everyMPtoPDFconversion=\toks34
 ) (C:\Users\Administrator\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+ (C:\Users\Administrator\AppData\Local\Programs\MiKTeX\tex/latex/grfext\grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
  (C:\Users\Administrator\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring ON on input line 85.
+Package hyperref Info: Link coloring ON on input line 87.
  (report.out) (report.out)
 \@outlinefile=\write3
 \openout3 = `report.out'.
@@ -568,8 +576,6 @@ Package caption Info: End \AtBeginDocument code.
 [1
 
 {C:/Users/Administrator/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/Administrator/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
-
-[2]
 
 [1])
 
@@ -638,27 +644,27 @@ Overfull \hbox (5.60635pt too wide) in paragraph at lines 22--23
 
 ) (chapters/2_theory.tex
 
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1 \newpage
-             [2]
+[2]
 Overfull \hbox (3.34673pt too wide) in paragraph at lines 4--5
 \T1/ptm/m/n/14.4 quires a mul-ti-dis-ci-plinary ap-proach, in-te-grat-ing dig-i-tal sig-nal pro-cess-ing, deep
  []
 
+<figures/stft_process.png, id=314, 6579.58125pt x 1259.70625pt>
+File: figures/stft_process.png Graphic file (type png)
+<use figures/stft_process.png>
+Package pdftex.def Info: figures/stft_process.png  used on input line 19.
+(pdftex.def)             Requested size: 396.91325pt x 75.98276pt.
 
 
 [3]
 
-[4]
-Overfull \hbox (24.57162pt too wide) in paragraph at lines 36--38
+[4 <./figures/stft_process.png>]
+Overfull \hbox (24.57162pt too wide) in paragraph at lines 45--47
 \T1/ptm/m/n/14.4 By ap-ply-ing YOLO to spec-tro-grams, the sys-tem can de-tect "cry ob-jects"^^Vdistinct
  []
 
 
-Overfull \hbox (67.39217pt too wide) in paragraph at lines 44--45
+Overfull \hbox (67.39217pt too wide) in paragraph at lines 53--54
 []\T1/ptm/b/n/14.4 Topic Hi-er-ar-chy: \T1/ptm/m/n/14.4 Data is or-ga-nized into top-ics (e.g., \T1/cmtt/m/n/14.4 vju/baby_monitor/alert\T1/ptm/m/n/14.4 ),
  []
 
@@ -667,82 +673,99 @@ Overfull \hbox (67.39217pt too wide) in paragraph at lines 44--45
 [5]) (chapters/3_implementation.tex
 
 [6]
+
+[7]
 Overfull \hbox (29.62553pt too wide) in paragraph at lines 11--12
 []\T1/ptm/b/n/14.4 System In-te-gra-tion: \T1/ptm/m/n/14.4 Es-tab-lish-ing se-cure com-mu-ni-ca-tion pro-to-cols (MQTT,
  []
 
+<figures/system_architecture.png, id=351, 2922.92pt x 5083.99374pt>
+File: figures/system_architecture.png Graphic file (type png)
+<use figures/system_architecture.png>
+Package pdftex.def Info: figures/system_architecture.png  used on input line 19.
+(pdftex.def)             Requested size: 286.65883pt x 498.57709pt.
 
-Overfull \hbox (5.7789pt too wide) in paragraph at lines 19--20
+
+[8]
+Overfull \hbox (5.7789pt too wide) in paragraph at lines 27--28
 \T1/ptm/m/n/14.4 user in-ter-face, pro-vid-ing dash-boards, his-tor-i-cal charts, and crit-i-cal alerts. 
  []
 
 
 
-[7]
-Overfull \hbox (94.07954pt too wide) in paragraph at lines 28--29
+[9 <./figures/system_architecture.png>]
+<figures/edge_pipeline.png, id=366, 2653.915pt x 5697.285pt>
+File: figures/edge_pipeline.png Graphic file (type png)
+<use figures/edge_pipeline.png>
+Package pdftex.def Info: figures/edge_pipeline.png  used on input line 35.
+(pdftex.def)             Requested size: 220.50887pt x 473.35268pt.
+
+
+[10 <./figures/edge_pipeline.png>]
+Overfull \hbox (94.07954pt too wide) in paragraph at lines 43--44
 []\T1/ptm/b/n/14.4 In-Memory Pro-cess-ing: \T1/ptm/m/n/14.4 Au-dio chunks are stored in RAM us-ing \T1/cmtt/m/n/14.4 collections.deque\T1/ptm/m/n/14.4 . 
  []
 
 
-Overfull \hbox (7.36841pt too wide) in paragraph at lines 29--30
+Overfull \hbox (7.36841pt too wide) in paragraph at lines 44--45
 []\T1/ptm/b/n/14.4 Virtual Buffers: \T1/ptm/m/n/14.4 Spec-tro-gram im-ages are gen-er-ated into \T1/cmtt/m/n/14.4 io.BytesIO()
  []
 
+<figures/backend_flow.png, id=372, 7284.21375pt x 4020.01875pt>
+File: figures/backend_flow.png Graphic file (type png)
+<use figures/backend_flow.png>
+Package pdftex.def Info: figures/backend_flow.png  used on input line 54.
+(pdftex.def)             Requested size: 396.91325pt x 219.04681pt.
 
 
-[8]
+[11 <./figures/backend_flow.png>]
 
-[9]) (chapters/4_results.tex
-Overfull \hbox (4.74902pt too wide) in paragraph at lines 76--1
+[12]) (chapters/4_results.tex
+Overfull \hbox (4.74902pt too wide) in paragraph at lines 98--1
 \T1/ptm/m/n/14.4 are se-curely stored us-ing \T1/cmtt/m/n/14.4 expo-secure-store \T1/ptm/m/n/14.4 (iOS) and \T1/cmtt/m/n/14.4 AsyncStorage \T1/ptm/m/n/14.4 (An-
  []
 
 
 
-[10]
+[13]
 
-[11]
+[14]
 Overfull \hbox (12.00006pt too wide) in paragraph at lines 47--48
 []\T1/ptm/b/n/14.4 Connection Re-cov-ery: \T1/ptm/m/n/14.4 The ap-pli-ca-tion suc-cess-fully re-established Web-
  []
 
 ) (chapters/5_conclusion.tex
 
-[12]
+[15]
 
-[13]
+[16]
 
-[14]
+[17]
 Overfull \hbox (3.9941pt too wide) in paragraph at lines 41--42
 []\T1/ptm/b/n/14.4 Technical Ver-sa-til-ity: \T1/ptm/m/n/14.4 Work-ing across Python (Back-end/AI), C++ (Op-
  []
 
 
 
-[15]
+[18]
 Overfull \hbox (118.60059pt too wide) in paragraph at lines 63--64
 []\T1/ptm/m/n/14.4 Timescale. (2024). \T1/ptm/m/it/14.4 TimescaleDB: Post-greSQL for Time-Series\T1/ptm/m/n/14.4 . https://www.timescale.com/ 
  []
 
 
 
-[16] (C:\Users\Administrator\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+[19] (C:\Users\Administrator\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
 )
 
-[17]
+[20]
 Overfull \hbox (34.79918pt too wide) in paragraph at lines 125--142
  [][] 
  []
 
 )
 
-Package caption Warning: Unused \captionsetup[figure] on input line 47.
-See the caption package documentation for explanation.
-
-
-
-[18] (report.aux)
+[21] (report.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-10-09>
@@ -751,17 +774,17 @@ Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: 107BCA39BAEDB41DE066279453BB4D3B;9735.
  ) 
 Here is how much of TeX's memory you used:
- 16765 strings out of 468080
- 266112 string characters out of 5421899
- 1175415 words of memory out of 5000000
- 45018 multiletter control sequences out of 15000+600000
+ 16875 strings out of 468080
+ 269024 string characters out of 5421899
+ 1177813 words of memory out of 5000000
+ 45113 multiletter control sequences out of 15000+600000
  686322 words of font info for 116 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,9n,79p,519b,2044s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,9n,79p,521b,2044s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Administrator\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\Administrator\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1440.pk><C:/Users/Administrator/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Administrator/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Administrator/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Administrator/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Administrator/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Administrator/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb><C:/Users/Administrator/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/Administrator/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/Administrator/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Administrator/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Administrator/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on report.pdf (26 pages, 230285 bytes).
+Output written on report.pdf (28 pages, 1348325 bytes).
 PDF statistics:
- 619 PDF objects out of 1000 (max. 8388607)
- 140 named destinations out of 1000 (max. 500000)
- 417 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 647 PDF objects out of 1000 (max. 8388607)
+ 147 named destinations out of 1000 (max. 500000)
+ 437 words of extra memory for PDF output out of 10000 (max. 10000000)
 

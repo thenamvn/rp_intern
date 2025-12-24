@@ -12,7 +12,16 @@ Sound propagates as a mechanical wave. In digital systems, continuous analog sig
 \end{itemize}
 
 \subsubsection{Short-Time Fourier Transform (STFT)}
-To analyze non-stationary signals like human speech, the signal must be transformed from the Time Domain to the Time-Frequency Domain. The Short-Time Fourier Transform (STFT) achieves this by segmenting the signal into overlapping windows and applying the Discrete Fourier Transform (DFT) to each segment:
+To analyze non-stationary signals like human speech, the signal must be transformed from the Time Domain to the Time-Frequency Domain.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/stft_process.png}
+    \caption{STFT Windowing and Transformation Process}
+    \label{fig:stft}
+\end{figure}
+
+The Short-Time Fourier Transform (STFT) achieves this by segmenting the signal into overlapping windows and applying the Discrete Fourier Transform (DFT) to each segment:
 \begin{equation}
     X(m, \omega) = \sum_{n=-\infty}^{\infty} x[n] w[n-m] e^{-j\omega n}
 \end{equation}
